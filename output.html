@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 sample output</title>
+</head>
+<body>
+    <div>First Name : <span id="first-name"></span></div><br>
+    <div>Last Name : <span id="last-name"></span></div><br>
+    <div>Comment : <span id="comment"></span></div><br>
+</body>
+<script>
+    const firstName = localStorage.getItem("first-name");
+    const lastName = localStorage.getItem("last-name");
+    const comment = localStorage.getItem("comment");
+
+    document.getElementById('first-name').textContent = firstName;
+    document.getElementById('last-name').textContent = lastName;
+    document.getElementById('comment').textContent = comment;
+</script>
+</html>
