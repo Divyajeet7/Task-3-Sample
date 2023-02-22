@@ -43,32 +43,31 @@
 
     // localStorage.setItem('form', json);
 
-
     // });
 
     let users = [];
-    let form = document.getElementById('form')
+    let form = document.getElementById('form');
 
 
     form.addEventListener('submit', (e) => {
-        
+
         e.preventDefault();
         let firstName = document.getElementById('firstName').value;
-        let lastName = document.getElementById('lastName').value
-        let comment = document.getElementById('comment').value
+        let lastName = document.getElementById('lastName').value;
+        let comment = document.getElementById('comment').value;
 
         let user = {
             firstName: firstName,
             lastName: lastName,
             comment: comment
-        }
+        };
 
-        document.getElementById('firstName').value=""
-        document.getElementById('lastName').value=""
-        document.getElementById('comment').value=""
+        document.getElementById('firstName').value = "";
+        document.getElementById('lastName').value = "";
+        document.getElementById('comment').value = "";
 
-        users.push(user)
-        localStorage.setItem('users', JSON.stringify(users))
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
 
     });
 

@@ -24,8 +24,8 @@
     //     document.getElementById('data').innerHTML += markup;
     // }
 
-    users = localStorage.getItem('users')
-    users = JSON.parse(users)
+    users = localStorage.getItem('users');
+    users = JSON.parse(users);
 
     displayUsers(users);
 
@@ -36,7 +36,7 @@
             <tr>
                 <td>First Name : ${user.firstName}</td><br>
                 <td>Last Name : ${user.lastName}</td><br>
-                <td>Comment : ${user.comment}</td>
+                <td>Comment : ${user.comment}</td><br>
             </tr>
             
             `
