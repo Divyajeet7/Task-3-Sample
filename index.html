@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 3 Sample</title>
 </head>
+
 <body>
     <form id="form">
         <div>
             <label for="firstName">First name :</label><br>
-            <input type="text" id="firstName"><br>
+            <input type="text" name="First Name" id="firstName"><br>
         </div>
         <div>
             <label for="lastName">Last name :</label><br>
-            <input type="text" id="lastName"><br>
+            <input type="text" name="Last Name" id="lastName"><br>
         </div>
         <div>
             <label for="comment">Comment :</label><br>
-            <input type="text" id="comment"><br>
+            <input type="text" name="Comment" id="comment"><br>
         </div>
         <div>
             <button type="submit">Submit</button>
         </div>
     </form>
 </body>
-<script src="script.js"></script>
+<script>
+
+    // const form = document.querySelector("form");
+
+    // form.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+
+    // const fd = new FormData(form);
+
+    // const obj = Object.fromEntries(fd);
+    // console.log(obj);
+
+    // const json = JSON.stringify(obj);
+
+    // localStorage.setItem('form', json);
+
+
+    // });
+
+    let users = [];
+    let form = document.getElementById('form')
+
+
+    form.addEventListener('submit', (e) => {
+        
+        e.preventDefault();
+        let firstName = document.getElementById('firstName').value;
+        let lastName = document.getElementById('lastName').value
+        let comment = document.getElementById('comment').value
+
+        let user = {
+            firstName: firstName,
+            lastName: lastName,
+            comment: comment
+        }
+
+        document.getElementById('firstName').value=""
+        document.getElementById('lastName').value=""
+        document.getElementById('comment').value=""
+
+        users.push(user)
+        localStorage.setItem('users', JSON.stringify(users))
+
+    });
+
+</script>
+
 </html>
